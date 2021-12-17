@@ -9,10 +9,11 @@ namespace todo
     class Program
     {
         /// The Azure Cosmos DB endpoint for running this GetStarted sample.
-        private string EndpointUrl = Environment.GetEnvironmentVariable("EndpointUrl");
+        private string EndpointUrl = "https://sqlapicosmosdbessaadani.documents.azure.com:443/";
 
         /// The primary key for the Azure DocumentDB account.
-        private string PrimaryKey = Environment.GetEnvironmentVariable("PrimaryKey");
+        //private string PrimaryKey = Environment.GetEnvironmentVariable("PrimaryKey");
+        private string PrimaryKey = "EMneTdmSKWU68mj6fedupDzLURVMIpgQdH9iVQka6dgZKKRfacJVygQfGFSGz1rVaNh62pPDe9dG1vLu3vkkLQ==";
 
         // The Cosmos client instance
         private CosmosClient cosmosClient;
@@ -144,13 +145,13 @@ namespace todo
         }
 
         public async Task GetStartedDemoAsync()
-        {
-            // Create a new instance of the Cosmos Client
-            this.cosmosClient = new CosmosClient(EndpointUrl, PrimaryKey);
-            await this.CreateDatabaseAsync();
-            await this.CreateContainerAsync();
-            await this.AddItemsToContainerAsync();
-            await this.QueryItemsAsync();
-        }
+{
+    // Create a new instance of the Cosmos Client
+    this.cosmosClient = new CosmosClient(EndpointUrl, PrimaryKey);
+    await this.CreateDatabaseAsync();
+    await this.CreateContainerAsync();
+    await this.AddItemsToContainerAsync();
+    await this.QueryItemsAsync();
+}
     }
 }
